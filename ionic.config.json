@@ -1,0 +1,7 @@
+{
+  "name": "vortex",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
