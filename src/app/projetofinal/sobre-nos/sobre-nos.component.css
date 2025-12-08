@@ -1,0 +1,185 @@
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(135deg, #3b0146 0%, #121216 35%);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin-top: 5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+}
+
+.container-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.titulo {
+    color: #C23FD9;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.paragrafo-titulo {
+    color: #B9B9B9;
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+.container-projeto, .container-equipe, .container-data, .container-tecnologias {
+    display: flex;
+    flex-direction: column;
+    background-color: #1C1C21;
+    border: 1px solid #303030;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 1rem;
+    width: 50%;
+    max-width: 800px;
+}
+
+.container-imagem-projeto, .container-imagem-equipe, .container-imagem-data {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imagem-projeto, .container-imagem-equipe, .container-imagem-data {
+    width: 35px;
+    object-fit: contain;
+}
+
+.titulo-projeto, .titulo-equipe, .titulo-data, .titulo-tecnologias {
+    margin: 0;
+    color: #fff;
+    text-wrap: nowrap;
+}
+
+.descricao-1-projeto {
+    color: #B9B9B9;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.descricao-2-projeto, .descricao-equipe, .descricao-data, .tecnologia-descricao {
+    color: #B9B9B9;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+.nome-participante {
+    color: #B9B9B9;
+    margin: 0;
+}
+
+.nome-participante::marker {
+  color: #C23FD9;
+  font-size: 1.5rem;
+}
+
+.pai-content-tecnologias {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.content-tecnologia {
+    background-color: #26262B;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    align-items: center;
+    border-radius: 10px;
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: 100px;
+}
+
+.tecnologia-nome {
+    margin: 0;
+    color: #F3F3F3;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121216;
+    border-top: 2px solid #303030;
+    padding: 2rem 0; 
+    width: 100%;
+    margin-top: 5rem;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+    max-width: 80%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+
+    .paragrafo-titulo {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .container-projeto, 
+    .container-equipe, 
+    .container-data, 
+    .container-tecnologias {
+        width: 90%; 
+        padding: 1.5rem;
+    }
+    
+    .titulo-equipe {
+        text-wrap: wrap; 
+    }
+
+    .content-tecnologia {
+        padding: 0.8rem 1rem;
+        flex-basis: 30%;
+        min-width: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .titulo-projeto, .titulo-equipe, .titulo-data, .titulo-tecnologias {
+        text-wrap: wrap;
+    }
+    
+    .content-tecnologia {
+        flex-basis: 45%; 
+    }
+    
+    footer p {
+        max-width: 95%;
+        font-size: 0.8rem;
+    }
+}

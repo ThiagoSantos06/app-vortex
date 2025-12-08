@@ -1,0 +1,55 @@
+<section>
+  <div class="voltar-container">
+    <a href="/boas-vindas" class="voltar-button">← Voltar</a>
+  </div>
+
+  <div class="login-container">
+    <div>
+      <h1 class="title">Fazer login</h1>
+      <p class="subtitle">Entre com suas credenciais para acessar sua conta</p>
+    </div>
+
+    <div class="form-container">
+
+      <div class="input-container-nome">
+        <label for="nome" class="label-usuario">Usuário</label>
+        <input
+          type="text"
+          id="nome"
+          placeholder="Digite seu usuário"
+          class="input-usuario"
+          [(ngModel)]="username"
+          name="username"
+        >
+        <p *ngIf="tentouEnviar && !username.trim()" class="erro-texto">
+          O nome de usuário deve ser preenchido.
+        </p>
+      </div>
+
+      <div class="input-container-senha">
+        <label for="senha" class="label-senha">Senha</label>
+        <input
+          type="password"
+          id="senha"
+          placeholder="••••••••"
+          class="input-senha"
+          [(ngModel)]="password"
+          name="password"
+        >
+        <p *ngIf="tentouEnviar && !password.trim()" class="erro-texto">
+          A senha deve ser preenchida.
+        </p>
+      </div>
+
+      <button class="botao-entrar" type="submit" (click)="signIn()">Entrar</button>
+    </div>
+
+    <div *ngIf="erroLogin" class="erro-texto" style="margin-top:8px; text-align:center;">
+      {{ erroLogin }}
+    </div>
+
+    <p class="nao-tem-conta-paragraph">
+      Não tem uma conta? <a href="/cadastro" class="navegar-conta-botao">Criar conta</a>
+    </p>
+  </div>
+</section>

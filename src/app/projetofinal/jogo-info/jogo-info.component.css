@@ -1,0 +1,181 @@
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(225deg, #3b0146 0%, #121216 35%);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    margin-top: 5rem;
+    height: auto;
+}
+
+.voltar-container {
+    margin-bottom: 1rem;
+}
+
+.voltar-botao {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.imagem-jogo {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0; 
+}
+
+.container-jogo-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.titulo-jogo {
+    color: #C23FD9;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.paragrafo-jogo {
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+.container-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #17171C;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    gap: 32px;
+}
+
+.titulo-links {
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+}
+
+.container-link-direcionar {
+    background-color: #121216;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.container-link-direcionar:hover {
+    border: 1px solid #C23FD9;
+    cursor: pointer;
+}
+
+.nome-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nome-link-direcionador {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.export-logo {
+    transition: 0.2s;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.link-inativo {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.link-inativo .nome-link-direcionador {
+  color: #888;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121216;
+    border-top: 2px solid #303030;
+    padding: 2rem 10px; 
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    max-width: 90%; 
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        width: 90%;
+    }
+
+    .container-jogo-info {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .imagem-jogo {
+        width: 100%;
+        max-height: 300px;
+    }
+    
+    .titulo-jogo {
+        font-size: 2rem;
+    }
+    
+    .container-links {
+        padding: 1.5rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .container-link-direcionar {
+        padding: 12px;
+        height: auto;
+    }
+    
+    .nome-link img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .export-logo {
+        width: 16px;
+        height: 16px;
+    }
+    
+    footer p {
+        max-width: 95%; 
+    }
+}
