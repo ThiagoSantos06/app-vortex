@@ -2,12 +2,13 @@ import { inject, Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { GameRequest } from "./GameRequest";
 import { GameDTO } from "./GameDTO";
+import { environment } from "src/environments/environment";
 
 @Injectable({
     providedIn: 'root'
 })
 export class GameRest {
-    private readonly url: string = "http://localhost:8080/game";
+    private readonly url: string = `${environment.apiUrl}/game`;
     private http: HttpClient = inject(HttpClient);
 
     saveGame(game: GameRequest) {

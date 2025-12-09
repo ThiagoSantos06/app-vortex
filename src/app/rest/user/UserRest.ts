@@ -8,7 +8,7 @@ import { environment } from "src/environments/environment";
 })
 export class UserRest {
     private http = inject(HttpClient);
-    private readonly url = environment.apiUrl + "/api/user";
+    private readonly url = environment.apiUrl + "/user";
 
     signUp(form: SignUpForm) {
         return this.http.post(this.url, form);
