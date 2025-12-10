@@ -5,9 +5,14 @@
 
 <ion-content>
 
-  <!-- Pull to Refresh -->
+  <!-- Pull-to-refresh -->
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
+    <ion-refresher-content
+      pullingIcon="arrow-down"
+      pullingText="Puxe para atualizar"
+      refreshingSpinner="circles"
+      refreshingText="Atualizando...">
+    </ion-refresher-content>
   </ion-refresher>
 
   <!-- Conteúdo do site -->
