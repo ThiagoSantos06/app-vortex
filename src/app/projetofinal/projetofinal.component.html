@@ -1,10 +1,19 @@
-<main>
-    <div>
-        <app-header></app-header>
-        <app-navbar></app-navbar>
-    </div>
-    <app-vortex-games></app-vortex-games>
-    <app-categorias></app-categorias>
-    <app-jogos></app-jogos>
-    <app-footer></app-footer>
-</main>
+<ion-header>
+  <app-header></app-header>
+  <app-navbar></app-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Pull to Refresh -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Conteúdo do site -->
+  <app-vortex-games></app-vortex-games>
+  <app-categorias></app-categorias>
+  <app-jogos></app-jogos>
+  <app-footer></app-footer>
+
+</ion-content>

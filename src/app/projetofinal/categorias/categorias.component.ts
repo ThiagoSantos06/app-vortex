@@ -8,18 +8,22 @@ import { RouterLink } from '@angular/router';
   selector: 'app-categorias',
   imports: [CommonModule, RouterLink],
   templateUrl: './categorias.component.html',
-  styleUrl: './categorias.component.css'
+  styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent implements OnInit {
   private categoryRest: CategoryRest = inject(CategoryRest)
   public categories: Category[] = []
 
   ngOnInit() {
+    this.carregarCategorias(); // já chama na inicialização
+  }
+
+  // Função pública que pode ser chamada pelo componente pai
+  public carregarCategorias(): void {
     this.categoryRest.getAllCategories().subscribe({
       next: (response) => {
         this.categories = response
       },
-
       error: () => {
         alert("Falha ao buscar categorias.")
       }
